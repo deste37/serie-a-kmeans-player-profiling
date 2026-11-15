@@ -25,8 +25,8 @@ Analisi di clustering non supervisionato e riduzione dimensionale (**K-Means + P
 
 ## Metodologia Statistica
 
-1. **Data Cleaning & Filtering:** Estrazione dei dati stagionali da FBref, esclusione dei portieri e filtro a $\ge 900$ minuti per eliminare la varianza dei campioni ridotti.
-2. **Feature Scaling:** Standardizzazione Z-score ($z = \frac{x - \mu}{\sigma}$) per evitare che scale diverse (es. minuti per partita vs gol per 90') distorcano le distanze euclidee del K-Means.
+1. **Data Cleaning & Filtering:** Estrazione dei dati stagionali da FBref, esclusione dei portieri e filtro a ≥ 900 minuti per eliminare la varianza dei campioni ridotti.
+2. **Feature Scaling:** Standardizzazione Z-score (`z = (x - μ) / σ`) per evitare che scale diverse (es. minuti per partita vs gol per 90') distorcano le distanze euclidee del K-Means.
 3. **Clustering & Proiezione:** Partizionamento con `KMeans(n_clusters=4, init='k-means++')` e proiezione ortogonale tramite `PCA(n_components=2)`.
 
 ## Come eseguire lo script
